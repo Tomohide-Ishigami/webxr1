@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test03_start_webxr</title>
+
+    <!-- icon setting -->
+    <link rel="icon" type="image/png" sizes="24x24"  href="favicon_24x24.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+      html, body {
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+      }
+      #renderCanvas {
+          width: 100%;
+          height: 100%;
+          touch-action: none;
+      }
+  </style>
+
+  <!-- htmlからダウンロード -->
+  <!--       
+  <script src="https://cdn.babylonjs.com/babylon.js"></script> 
+  <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>  
+  <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
+  -->
+
+  <!-- ローカル -->
+  <script src="js/babylon/babylon.js"></script>
+  <script src="js/babylon/loaders/babylonjs.loaders.min.js"></script>
+  <!-- <script src="js/babylon/viewer/babylon.viewer.js"></script> -->
+
+</head>
+<body>
+	<canvas id="renderCanvas"></canvas>
+  <!-- メインコードを記載 (top levelのawaitを許可 > モジュールのインポート方法が変わるので暫定対応)-->
+  <!-- <script type='module' src="js/main.js"></script>   -->
+
+  <!-- メインコードを記載-->
+  <script src="js/main.js"></script>    
+</body>
+</html>
+
+<!--
+ ・html内で 
+   html:5 > テンプレート作成
+
+  ・htmlの記載は以下のページを参考
+  　https://doc.babylonjs.com/setup/starterHTML/
+-->
+
+<!--
+ URLリンク例(LiveServer使用):
+ http://127.0.0.1:5500/test02_glb_preview/index.html?debug=true&glb=ce3
+-->
