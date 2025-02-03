@@ -8,7 +8,7 @@ babylon.jsを用いた3D表示のテストコード
 
 ![alt text](images/250203_githubでhttps接続した例.jpg)
 ↑ githubでhttps接続した例  
-![alt text](250203_Quest3のブラウザでWebXRでログインしワープした画面キャプチャ.jpg)  
+![alt text](images/250203_Quest3のブラウザでWebXRでログインしワープした画面キャプチャ.jpg)  
 ↑ Quest3のブラウザでWebXRでログインしワープした画面キャプチャ  
 
  ### 3.1 githubに格納しhttps通信でアクセス参考
