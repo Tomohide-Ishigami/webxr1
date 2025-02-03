@@ -1,10 +1,16 @@
 # Babylon3DViewTest
 babylon.jsを用いた3D表示のテストコード
 
-## 3. githubに格納しhttps通信でアクセス
+## 1. githubに格納しhttps通信でアクセス
   コード: https://github.com/Tomohide-Ishigami/webxr1  
     ↓  
 　httpsアクセス: https://tomohide-ishigami.github.io/webxr1/index.html  
+
+![alt text](images/250203_githubでhttps接続した例.jpg)
+↑ githubでhttps接続した例  
+![alt text](250203_Quest3のブラウザでWebXRでログインしワープした画面キャプチャ.jpg)  
+↑ Quest3のブラウザでWebXRでログインしワープした画面キャプチャ  
+
  ### 3.1 githubに格納しhttps通信でアクセス参考
  [GitHubでWebサーバー立ててみた話](https://note.com/straw_polarbear/n/nc14b503c654f)  
 ・上記サイトを参考に、個人/会社のgithubで一旦リポジトリを作成  
