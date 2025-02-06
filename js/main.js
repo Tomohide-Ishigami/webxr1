@@ -51,18 +51,22 @@ const createScene = async function () {
     const params = new URLSearchParams(window.location.search);
 
     // クエリパラメータに debug=true が指定されている場合
-    const debugFlg = params.get('debug');
-    if (debugFlg === 'true') {
+    const urlDebugFlg = params.get('debug');
+    if (urlDebugFlg === 'true') {
         // babylon.jsのdebug画面表示
+        console.log("debug=true")        
         scene.debugLayer.show({ embedMode: true });
     }
 
-    let ce3Flag = 'false';
+    let webxrFlg = 'true';
     // クエリパラメータに glb=ce3 が指定されている場合
-    const glbFlag = params.get('glb');
-    if (glbFlag === 'ce3') {
-        ce3Flag = 'true';
+    const urlWebxrFlg = params.get('webxr');
+    if (urlWebxrFlg === 'false') {
+        webxrFlg = 'false';
+        console.log("webxr=false")
     }
+
+    console.log("webxrflg:", webxrFlg)
 
     // playground search (コードサンプル検索)
     // https://doc.babylonjs.com/playground/?
@@ -73,25 +77,17 @@ const createScene = async function () {
     // https://github.com/fujikawa-y/BabylonSamples/blob/main/01_import_glb.html
     // https://doc.babylonjs.com/typedoc/functions/BABYLON.appendSceneAsync
     // https://doc.babylonjs.com/playground/?q=appendSceneAsync&type=code
-    if (ce3Flag === 'true') {
-        // BABYLON.appendSceneAsync("glb/20241012_CE3_faro_ds0.005_nr_remove_ceiling_toMesh_div40.glb", scene).then((result) => {
-        //     console.log("load ce3 glb ok");
-        // }).catch((err) => {
-        //     console.log("load ce3 glb error");
-        // });            
-    }
-    else{
-        // https://ft-lab.jp/blog_3dcg/?p=830 > ダウンロード : gltfTest_PBRMaterial.zip
-        BABYLON.appendSceneAsync("glb/gltfTest_PBRMaterial.glb", scene).then((result) => {
-            console.log("load gltfTest_PBRMaterial.glb ok");
-            scene.getNodeByName("ルートパート").position = new BABYLON.Vector3(0, 0.1, 1); // position            
-            scene.getNodeByName("ルートパート").rotation = new BABYLON.Vector3(0, 3.14, 0); // rotation            
-            // scene.getNodeByName("ルートパート").rotationQuaternion = new BABYLON.Quaternion(0, 0, 0, 1); // rotation (Quaternion)
-            scene.getNodeByName("ルートパート").scaling  = new BABYLON.Vector3(7.5, 7.5, 7.5); // scale             
-        }).catch((err) => {
-            console.log("load PBRMaterial.glb error");
-        });
-    }
+
+    // https://ft-lab.jp/blog_3dcg/?p=830 > ダウンロード : gltfTest_PBRMaterial.zip
+    BABYLON.appendSceneAsync("glb/gltfTest_PBRMaterial.glb", scene).then((result) => {
+        console.log("load gltfTest_PBRMaterial.glb ok");
+        scene.getNodeByName("ルートパート").position = new BABYLON.Vector3(0, 0.1, 1); // position            
+        scene.getNodeByName("ルートパート").rotation = new BABYLON.Vector3(0, 3.14, 0); // rotation            
+        // scene.getNodeByName("ルートパート").rotationQuaternion = new BABYLON.Quaternion(0, 0, 0, 1); // rotation (Quaternion)
+        scene.getNodeByName("ルートパート").scaling  = new BABYLON.Vector3(7.5, 7.5, 7.5); // scale             
+    }).catch((err) => {
+        console.log("load PBRMaterial.glb error");
+    });
 
     // 常にbabylon.jsのdebug画面表示
     // scene.debugLayer.show({embedMode: true});
@@ -101,13 +97,13 @@ const createScene = async function () {
     // ubuntuでオレオレ証明: https://ja.linux-console.net/?p=3118
     // ----------------------------------------------------------    
     // live serverでhttpsの設定済みならtrue、それ以外はfalse
-    const iHttpsOK = true;
+    const httpsOK = true;
 
     // ----------------------------------------------------------
     // HTTPSでアクセスしないとエラー > live serverでオレオレ証明を実施
     // WebXRの実装参考:  Babylonjsレシピ集vol1.pdf P.127～
     // ----------------------------------------------------------    
-    if (iHttpsOK === true) {
+    if (httpsOK === true && webxrFlg === true) {
         console.log("HTTPS OK");
         
         // WebXRの準備
