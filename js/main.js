@@ -105,7 +105,7 @@ const createScene = async function () {
     // WebXRの実装参考:  Babylonjsレシピ集vol1.pdf P.127～
     // ----------------------------------------------------------    
     if (httpsOK === true && webxrFlg === true) {
-        console.log("HTTPS OK");
+        console.log("HTTPS OK && webXR OK");
         
         // WebXRの準備
         const xr = await scene.createDefaultXRExperienceAsync({
