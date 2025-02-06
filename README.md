@@ -17,6 +17,10 @@ babylon.jsを用いた3D表示のテストコード
  ・httpsアクセス＆webXRをオフ:  https://tomohide-ishigami.github.io/webxr1/index.html?webxr=false  
  ・httpsアクセス＆デバッグ＆webXRをオフ： https://tomohide-ishigami.github.io/webxr1/index.html?debug=true&webxr=false  
 
+## 1.2 githubのブラウザ上でvscodeでデバッグ(github copilotは動かない)
+ githubのページを開き、「.」を押す > [https://github.dev/ユーザ名/リポジトリ名でアクセス](https://github.dev/Tomohide-Ishigami/webxr1)  
+ [GitHubから直接開くVisualStudioCodeが便利](https://weseek.co.jp/tech/3405/)
+
  ### 3.1 githubに格納しhttps通信でアクセス参考
  [GitHubでWebサーバー立ててみた話](https://note.com/straw_polarbear/n/nc14b503c654f)  
 ・上記サイトを参考に、個人/会社のgithubで一旦リポジトリを作成  
