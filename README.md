@@ -12,7 +12,10 @@ babylon.jsを用いた3D表示のテストコード
 ↑ Quest3のブラウザでWebXRでログインしワープした画面キャプチャ  
 
 ## 1.1 引数
- httpsアクセス＆デバッグ: https://tomohide-ishigami.github.io/webxr1/index.html?debug=true
+ ・httpsアクセス:  https://tomohide-ishigami.github.io/webxr1/index.html  
+ ・httpsアクセス＆デバッグ:  https://tomohide-ishigami.github.io/webxr1/index.html?debug=true  
+ ・httpsアクセス＆webXRをオフ:  https://tomohide-ishigami.github.io/webxr1/index.html?webxr=false  
+ ・httpsアクセス＆デバッグ＆webXRをオフ： https://tomohide-ishigami.github.io/webxr1/index.html?debug=true&webxr=false  
 
  ### 3.1 githubに格納しhttps通信でアクセス参考
  [GitHubでWebサーバー立ててみた話](https://note.com/straw_polarbear/n/nc14b503c654f)  
