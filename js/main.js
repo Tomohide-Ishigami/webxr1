@@ -58,11 +58,11 @@ const createScene = async function () {
         scene.debugLayer.show({ embedMode: true });
     }
 
-    let webxrFlg = 'true';
+    let webxrFlg = true;
     // クエリパラメータに glb=ce3 が指定されている場合
     const urlWebxrFlg = params.get('webxr');
     if (urlWebxrFlg === 'false') {
-        webxrFlg = 'false';
+        webxrFlg = false;
         console.log("webxr=false")
     }
 
