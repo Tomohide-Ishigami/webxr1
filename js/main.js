@@ -66,8 +66,6 @@ const createScene = async function () {
         console.log("webxr=false")
     }
 
-    console.log("webxrflg:", webxrFlg)
-
     // playground search (コードサンプル検索)
     // https://doc.babylonjs.com/playground/?
 
@@ -98,6 +96,9 @@ const createScene = async function () {
     // ----------------------------------------------------------    
     // live serverでhttpsの設定済みならtrue、それ以外はfalse
     const httpsOK = true;
+
+    console.log("webxrflg:", webxrFlg)
+    console.log("httpsOK: ", httpsOK)
 
     // ----------------------------------------------------------
     // HTTPSでアクセスしないとエラー > live serverでオレオレ証明を実施
