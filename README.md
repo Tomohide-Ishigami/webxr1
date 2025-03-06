@@ -49,3 +49,5 @@ https://playground.babylonjs.com/
 https://doc.babylonjs.com/playground
    - 公式入門チュートリアルざっくり和訳（Microfost社員のちょまどさんが公開）  
 https://zenn.dev/chomado/books/babylonjs-tutorial-ja 
+   - [お勧め] Babylon.jsで始めるQuest対応WebXR  
+https://www.docswell.com/s/Tks_Yoshinaga/K24EG1-quest-webxr#p1  
